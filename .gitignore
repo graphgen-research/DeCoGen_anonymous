@@ -1,0 +1,31 @@
+# Virtual environments -- never belong in git
+venv_eval/
+venv_train/
+
+# Model checkpoints and saved weights (large binaries)
+model_save/
+
+# Generated/output data
+graphs/
+results/
+results2/
+
+# Logs and scratch/temp data
+tensorboard/
+tmp/
+tmp_dfscode/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Datasets can be large -- uncomment if you want to exclude them too
+# datasets/
+
+# OS/editor cruft
+.DS_Store
+*.swp
+plot.py
+entropy.py
+datasets/cora/min_dfscode_tensors/
+datasets/cora/min_dfscode_tensors/
