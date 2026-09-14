@@ -67,14 +67,9 @@ class Args:
         # ** Hierarchy-Penalty Hyperparameters **
         # margin m for hinge (child must be = m deeper than parent)
         self.alpha = 0.25          # matches DeCoGen's tuned alpha, for a fair comparison
-        self.lambda_hier = 5       # matches DeCoGen's tuned lambda_hier (per earlier correction)
+        self.lambda_hier = 0       # matches DeCoGen's tuned lambda_hier (per earlier correction)
         self.hyperparameter_search = True  # Enable grid search if desired
 
-        # ** Direct-Supervision Variant (Exp 1c) **
-        # When True, replaces the soft margin/ranking hierarchy loss with
-        # direct MSE supervision: predicted_depth(child) = predicted_depth(parent) + 1.
-        # See _hierarchy_penalty_direct_supervision in train.py.
-        self.direct_supervision = True   # NEW
 
         # Training config
         self.batch_size        = 32

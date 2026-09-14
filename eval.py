@@ -28,7 +28,7 @@ class ArgsEvaluate():
         self.device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
         # === UPDATE THIS TO YOUR MODEL ===
-        self.model_path = '/DeCoGen/model_save/DFScodeRNN_cora_2026-07-15 19:12:22/DFScodeRNN_cora_368.dat'
+        self.model_path = 'model_save/DFScodeRNN_amazon_directsup_2026-09-14 10:46:39/DFScodeRNN_amazon_directsup_2004.dat'
 
         self.num_epochs = get_model_attribute('epoch', self.model_path, self.device)
 
@@ -40,11 +40,11 @@ class ArgsEvaluate():
         self.metric_eval_batch_size = 40
 
         # DFScodeRNN
-        self.max_num_edges = 109
+        self.max_num_edges = 102
 
         # GraphRNN (kept for compatibility if you switch model)
-        self.min_num_node = 9
-        self.max_num_node = 99
+        self.min_num_node = 40
+        self.max_num_node = 103
 
         self.train_args = get_model_attribute('saved_args', self.model_path, self.device)
 
